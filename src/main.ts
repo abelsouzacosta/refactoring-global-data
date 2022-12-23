@@ -8,6 +8,7 @@
 // make the variable immutable
 // repeat cycle
 export function distanceTravelled(scenario, time) {
+  const MINIMAL_SECONDARY_TIME = 0;
   let result;
   const primaryAcceleration = scenario.primaryForce / scenario.mass;
   let primaryTime = Math.min(time, scenario.delay);
@@ -15,7 +16,7 @@ export function distanceTravelled(scenario, time) {
 
   let secondaryTime = time - scenario.delay;
 
-  if (secondaryTime > 0) {
+  if (secondaryTime > MINIMAL_SECONDARY_TIME) {
     let primaryVelocity = primaryAcceleration * scenario.delay;
     const secondaryAcceleration =
       (scenario.primaryForce + scenario.secondaryForce) / scenario.mass;
