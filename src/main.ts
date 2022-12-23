@@ -1,12 +1,5 @@
 // @ts-nocheck
 
-// todo: [refactor] - variable acc has more than one responsibility
-// it receives two values along the code so it has more than one, actually two
-// responsibilities, so it must be replaced for two variables with one responsibility each
-
-// change the name of the variable until the first reassingment
-// make the variable immutable
-// repeat cycle
 export function distanceTravelled(scenario, time) {
   const MINIMAL_SECONDARY_TIME = 0;
   let result;
