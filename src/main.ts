@@ -1,5 +1,8 @@
 // @ts-nocheck
 
+// todo: [refactor] - variable acc has more than one responsibility
+// it receives two values along the code so it has more than one, actually two
+// responsibilities, so it must be replaced for two variables with one responsibility each
 export function distanceTravelled(scenario, time) {
   let result;
   let acc = scenario.primaryForce / scenario.mass;
